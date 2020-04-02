@@ -1,0 +1,13 @@
+global-styling:
+  version: VERSION
+  js:
+    js/popper.min.js: {}
+    js/bootstrap.min.js: {}
+    js/global.js: {}
+  css:
+    component:
+    # Mode débug => changer pour .min.css en mode prod
+      css/style.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

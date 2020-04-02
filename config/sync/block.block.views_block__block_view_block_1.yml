@@ -1,0 +1,34 @@
+uuid: 59dc427a-01ed-42db-941d-73dec79ead74
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.block_view
+  module:
+    - ctools
+    - views
+  theme:
+    - norsys
+id: views_block__block_view_block_1
+theme: norsys
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:block_view-block_1'
+settings:
+  id: 'views_block:block_view-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      agence: agence
+      page_de_rubrique: page_de_rubrique
+      page_simple: page_simple
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

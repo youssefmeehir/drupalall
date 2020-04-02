@@ -1,0 +1,14 @@
+uuid: 1e88cac0-2fae-464f-842d-fe007a9154d8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - user
+id: utilisateurs
+label: Utilisateurs
+type: 'canonical_entities:user'
+pattern: 'utilisateur/[user:display-name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,14 @@
+uuid: 493074a9-8cfa-4c99-a348-b57b00bf72f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.contrib
+  module:
+    - user
+id: user_add_role_action.contrib
+label: 'Ajouter le rôle contrib aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: contrib

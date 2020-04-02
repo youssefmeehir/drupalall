@@ -1,0 +1,5 @@
+name: Norsys base
+type: module
+description: Module Norsys base
+package: Norsys
+core: 8.x

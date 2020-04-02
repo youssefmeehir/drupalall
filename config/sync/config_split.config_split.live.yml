@@ -1,0 +1,15 @@
+uuid: 28ca32ba-82ae-44f0-8c4a-6dc02d328da3
+langcode: fr
+status: false
+dependencies: {  }
+id: live
+label: live
+description: 'Split pour environnement de production'
+folder: ../config/live
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 1

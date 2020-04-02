@@ -1,0 +1,76 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Norsys base module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function norsys_base_install() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function norsys_base_uninstall() {
+  \Drupal::messenger()->addStatus(__FUNCTION__);
+}
+
+function norsys_base_update_8701() {
+  $database = \Drupal::database();
+  $schema = $database->schema();
+  $table_name = 'candidature';
+
+  $table_schema = [
+    'description' => 'description pour update database',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'nom' => [
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+      'prenom' => [
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+      'telephone' => [
+        'description' => 'le telephone',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+     'mail' => [
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+      'qlq_mots' => [
+        'description' => 'quelques mots',
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+      'cv' => [
+        'type' => 'text',
+        'not null' => TRUE,
+      ],
+   ],
+    'primary key' => ['id'],
+  ];
+  $schema->createTable($table_name, $table_schema);
+}
+
+function norsys_base_update_8702() {
+  $ret = [];
+  $schema = \Drupal::database()->schema();
+  $ret[] = $schema->dropField('candidature', 'qlq_mots');
+  $spec = [
+    'type' => 'text',
+  ];
+  $ret[] = $schema->addField('candidature', 'mots', $spec);
+  return $ret;
+}

@@ -1,0 +1,38 @@
+uuid: 8e944191-20d2-43d7-be7b-72133efeaf86
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_agence
+    - node.type.agence
+  module:
+    - image
+id: node.agence.field_image_agence
+field_name: field_image_agence
+entity_type: node
+bundle: agence
+label: image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

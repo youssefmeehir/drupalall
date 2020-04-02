@@ -1,0 +1,26 @@
+uuid: f352e6e3-8553-43a1-ae62-9bfdc459e5d5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - acharichi
+    - system
+  theme:
+    - norsys
+id: acharichiimageblock
+theme: norsys
+region: content
+weight: 0
+provider: null
+plugin: acharichi_image_block
+settings:
+  id: acharichi_image_block
+  label: 'acharichi image block'
+  provider: acharichi
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /acharichi
+    negate: false
+    context_mapping: {  }

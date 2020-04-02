@@ -1,0 +1,19 @@
+uuid: 4734f92a-07ff-4843-9901-631c263b465d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adresse
+    - node.type.agence
+id: node.agence.field_adresse
+field_name: field_adresse
+entity_type: node
+bundle: agence
+label: Adresse
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,7 @@
+ielbahay.content:
+  path: '/first'
+  defaults:
+    _controller: 'Drupal\ielbahay\Controller\FormationController::content'
+    _title: 'formation pratique'
+  requirements:
+    _permission: 'access content'

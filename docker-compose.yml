@@ -1,0 +1,72 @@
+version: "3"
+services:
+  # Service Web : drupal 8 avec drush only
+  web:
+    image: slebote/drupal-docker:8.7.6
+    volumes:
+      - ./web/libraries:/var/www/html/libraries
+      - ./web/modules:/var/www/html/modules
+      - ./web/profiles:/var/www/html/profiles
+      - ./web/sites:/var/www/html/sites
+      - ./web/themes:/var/www/html/themes
+      - ./config:/var/www/config
+      - ./console:/var/www/console
+      - ./drush:/var/www/drush
+      - ./scripts:/var/www/scripts
+      - ./vendor:/var/www/vendor
+      - ./load.environment.php:/var/www/load.environment.php
+      - ./web/sites/default/settings/settings.dev.php:/var/www/html/sites/default/settings.php
+    working_dir: /var/www/html
+    links:
+      - mysql
+    ports:
+      - 44318:443
+    environment:
+      - VIRTUAL_HOST=drupal8-formation.app.local.fr
+      - VIRTUAL_PORT=443
+      - VIRTUAL_PROTO=https
+      - PATH=/var/www/vendor/bin:$PATH
+      - DRUPAL_ENV=dev
+      - SITE_DB_NAME=drupal8_dev
+      - SITE_DB_USER=drupal8
+      - SITE_DB_PASSWORD=MDP2drupal8
+      - SITE_DB_HOST=mysql
+      - SITE_DB_PORT=3306
+  # Service Mysql : base de données Mysql en volume Docker
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - mysql-datas:/var/lib/mysql
+    ports:
+      - 33078:3306
+    environment:
+      - MYSQL_USER=drupal8
+      - MYSQL_PASSWORD=MDP2drupal8
+      - MYSQL_DATABASE=drupal8_dev
+      - MYSQL_ROOT_PASSWORD=D8root!
+  # Service Memcache
+#  memcache:
+#    image: memcached:1-alpine
+  # Service Composer
+  composer:
+    image: slebote/drupal-composer:1.8
+    volumes:
+      - ./:/app
+    command: install
+  # Service Node / Gulp
+  gulp:
+    image: slebote/gulp
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=dev
+    volumes:
+      - ./web/themes/custom/norsys:/home/node/app
+    command:
+      - /bin/sh
+      - -c
+      - |
+          npm install
+          gulp
+volumes:
+  mysql-datas:

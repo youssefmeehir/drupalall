@@ -1,0 +1,30 @@
+uuid: c5d8fb77-1d51-437d-9d15-e0df8fb0ed9b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page_de_rubrique.field_page
+    - node.type.page_de_rubrique
+  module:
+    - user
+id: node.page_de_rubrique.default
+targetEntityType: node
+bundle: page_de_rubrique
+mode: default
+content:
+  field_page:
+    weight: 1
+    label: visually_hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

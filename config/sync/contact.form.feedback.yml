@@ -1,0 +1,14 @@
+uuid: 54a3dd97-1c67-475f-b6bd-0a1d99e303ca
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Retours utilisateurs sur le site web'
+recipients:
+  - slebote@norsys.fr
+reply: ''
+weight: 0
+message: 'Votre message a été envoyé.'
+redirect: ''

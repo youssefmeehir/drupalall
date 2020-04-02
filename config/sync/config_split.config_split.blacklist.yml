@@ -1,0 +1,18 @@
+uuid: e09d18c6-4aca-4dde-b0e3-1af736c56d76
+langcode: fr
+status: false
+dependencies: {  }
+id: blacklist
+label: blacklist
+description: 'Éléments a ignorer quand export'
+folder: ''
+module: {  }
+theme: {  }
+blacklist:
+  - automated_cron.settings
+  - 'webform.*'
+  - 'system.action.webform_*'
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

@@ -1,0 +1,21 @@
+uuid: 8c0854c9-eab1-4231-89b5-290388cab1ce
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tite_page_simple
+field_name: field_tite_page_simple
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

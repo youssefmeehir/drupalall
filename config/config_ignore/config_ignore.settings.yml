@@ -1,0 +1,10 @@
+ignored_config_entities:
+  0: 'webform.*'
+  2: 'system.action.webform_*'
+  4: 'metatag.metatag_defaults.page_variant__*'
+  6: system.site.name
+  8: system.site.mail
+  10: system.site.slogan
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
+langcode: fr

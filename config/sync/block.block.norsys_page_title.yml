@@ -1,0 +1,20 @@
+uuid: 46327545-642b-429e-9e03-47d4a23df2d8
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - norsys
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: norsys_page_title
+theme: norsys
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  provider: core
+  label_display: '0'
+visibility: {  }

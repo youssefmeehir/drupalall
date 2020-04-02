@@ -1,0 +1,27 @@
+norsys_base.config:
+  title: Norsys base
+  route_name: norsys_base.settings_form
+  parent: system.admin_config_system
+  description: 'Administration du module Norsys base'
+  weight: -10
+
+norsys_base.firstlink_link:
+  title: First
+  route_name: norsys_base.firstlink
+  menu_name: main
+  description: 'Lien vers page simple'
+  weight: 10
+
+norsys_base.Secondlink_link:
+  title: Second
+  route_name: norsys_base.secondlink
+  menu_name: main
+  description: 'Lien vers page simple'
+  weight: 10
+
+norsys_base.thirdlink_link:
+  title: Third
+  route_name: norsys_base.thirdlink
+  menu_name: main
+  description: 'Lien vers page simple'
+  weight: 10

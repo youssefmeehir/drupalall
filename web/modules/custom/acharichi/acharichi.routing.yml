@@ -1,0 +1,7 @@
+acharichi.content:
+  path: '/acharichi'
+  defaults:
+    _title: 'My content'
+    _controller: 'Drupal\acharichi\Controller\ContentController::page'
+  requirements:
+    _permission: 'access content'

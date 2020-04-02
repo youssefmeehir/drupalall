@@ -1,0 +1,127 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "harvesthq/chosen",
+                "version": "1.8.7",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.7/chosen_v1.8.7.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "^1.2.0"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/admin_toolbar": "^1.27",
+        "drupal/bootstrap_barrio": "^4.22",
+        "drupal/bootstrap_layouts": "^5.1",
+        "drupal/bootstrap_sass": "^1.9",
+        "drupal/chosen": "^2.8",
+        "drupal/config_ignore": "^2.1",
+        "drupal/config_split": "^1.4",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "8.7.6",
+        "drupal/devel": "^2.1",
+        "drupal/ds": "^3.4",
+        "drupal/eu_cookie_compliance": "^1.8",
+        "drupal/google_analytics": "^3.0",
+        "drupal/google_tag": "^1.2",
+        "drupal/honeypot": "^1.29",
+        "drupal/memcache": "^2.0",
+        "drupal/menu_admin_per_menu": "^1.0",
+        "drupal/menu_link_attributes": "^1.0",
+        "drupal/module_filter": "^3.1",
+        "drupal/pathauto": "^1.4",
+        "drupal/redirect": "^1.4",
+        "drupal/robotstxt": "^1.2",
+        "drupal/search_api": "^1.15",
+        "drupal/simple_sitemap": "^3.3",
+        "drupal/sitemap": "^1.5",
+        "drupal/smtp": "^1.0@beta",
+        "drupal/views_bootstrap": "^4.1",
+        "drupal/yaml_editor": "^1.0",
+        "drush/drush": "^9.0.0",
+        "harvesthq/chosen": "^1.8",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+        "webflo/drupal-core-require-dev": "^8.7.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/profiles/custom/{$name}": ["type:drupal-custom-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        }
+    }
+}

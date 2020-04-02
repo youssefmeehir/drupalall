@@ -1,0 +1,7 @@
+hsaaidi.content:
+  path: '/mypage'
+  defaults:
+    _controller: 'Drupal\hsaaidi\Controller\FirstController::content'
+    _title: 'Ma première page dans mon premier module en Drupal8'
+  requirements:
+    _permission: 'access content'

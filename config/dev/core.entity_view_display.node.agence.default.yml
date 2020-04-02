@@ -1,0 +1,101 @@
+uuid: ea932f44-b692-45a9-9556-f48399f5ed2e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.agence.body
+    - field.field.node.agence.field_adresse
+    - field.field.node.agence.field_contact
+    - field.field.node.agence.field_email
+    - field.field.node.agence.field_image_agence
+    - field.field.node.agence.field_photo_equipe
+    - field.field.node.agence.field_presentation
+    - field.field.node.agence.field_telephone
+    - field.field.node.agence.field_titre
+    - node.type.agence
+  module:
+    - image
+    - text
+    - user
+id: node.agence.default
+targetEntityType: node
+bundle: agence
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_adresse:
+    weight: 105
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_contact:
+    weight: 104
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email:
+    weight: 106
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image_agence:
+    weight: 103
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_photo_equipe:
+    weight: 109
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_presentation:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_telephone:
+    weight: 107
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_titre:
+    weight: 102
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

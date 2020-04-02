@@ -1,0 +1,26 @@
+uuid: e3838e49-f9d2-468c-bd31-4b68b11f9e43
+langcode: fr
+status: true
+dependencies:
+  module:
+    - acharichi
+    - system
+  theme:
+    - norsys
+id: acharichitextblock
+theme: norsys
+region: sidebar_second
+weight: 0
+provider: null
+plugin: acharichi_text_block
+settings:
+  id: acharichi_text_block
+  label: 'acharichi text block'
+  provider: acharichi
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /acharichi
+    negate: false
+    context_mapping: {  }

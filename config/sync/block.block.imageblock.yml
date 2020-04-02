@@ -1,0 +1,26 @@
+uuid: d1275c83-f32e-472e-9110-5719e4e5d68d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ielbahay
+    - system
+  theme:
+    - norsys
+id: imageblock
+theme: norsys
+region: content
+weight: 0
+provider: null
+plugin: Image_block
+settings:
+  id: Image_block
+  label: 'Image block'
+  provider: ielbahay
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /first
+    negate: false
+    context_mapping: {  }

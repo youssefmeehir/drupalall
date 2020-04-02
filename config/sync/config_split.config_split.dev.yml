@@ -1,0 +1,21 @@
+uuid: 213abda1-54fd-4a02-a9aa-c4224b2b04e7
+langcode: fr
+status: false
+dependencies: {  }
+id: dev
+label: dev
+description: 'Split pour environnement de développement'
+folder: ../config/dev
+module:
+  devel: 0
+  devel_generate: 0
+  ds_devel: 0
+  field_ui: 0
+  menu_ui: 0
+  views_ui: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 3

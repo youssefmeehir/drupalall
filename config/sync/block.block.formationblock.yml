@@ -1,0 +1,35 @@
+uuid: 1f13e9f6-7a24-4cda-8012-698eb744d0e1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - ctools
+    - ielbahay
+    - system
+  theme:
+    - norsys
+id: formationblock
+theme: norsys
+region: content
+weight: 0
+provider: null
+plugin: Formation_block
+settings:
+  id: Formation_block
+  label: 'Formation block'
+  provider: ielbahay
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /first
+    negate: false
+    context_mapping: {  }

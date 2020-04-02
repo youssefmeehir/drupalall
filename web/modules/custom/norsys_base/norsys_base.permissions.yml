@@ -1,0 +1,4 @@
+administer norsys_base configuration:
+  title: 'Administer norsys_base configuration'
+  description: ''
+  restrict access: true

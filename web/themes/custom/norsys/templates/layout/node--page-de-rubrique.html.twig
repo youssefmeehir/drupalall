@@ -1,0 +1,7 @@
+<div class="row">
+  {% for key,value in node.field_page.value %}
+    <div class="col col-md-4">
+        {{ content.field_page[key] }}
+    </div>
+  {% endfor %}
+</div>

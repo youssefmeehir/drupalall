@@ -1,0 +1,8 @@
+uuid: e5394046-e90f-4fb7-a21f-f50e4f321eb8
+langcode: fr
+status: true
+dependencies: {  }
+id: menu-footer
+label: 'Menu footer'
+description: 'Liensvers deus pages'
+locked: false

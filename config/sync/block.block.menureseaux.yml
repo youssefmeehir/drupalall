@@ -1,0 +1,25 @@
+uuid: 0e0be174-f99c-43f0-a384-6dbf77011a2e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-reseaux
+  module:
+    - system
+  theme:
+    - norsys
+id: menureseaux
+theme: norsys
+region: footer_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-reseaux'
+settings:
+  id: 'system_menu_block:menu-reseaux'
+  label: 'Menu reseaux'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,14 @@
+uuid: c27c008b-bafe-47b9-914a-6f3ee8d5f67e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.contrib
+  module:
+    - user
+id: user_remove_role_action.contrib
+label: 'Enlever le rôle contrib des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: contrib

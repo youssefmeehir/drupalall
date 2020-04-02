@@ -1,0 +1,52 @@
+norsys_base.settings_form:
+  path: '/admin/config/system/norsys-base'
+  defaults:
+    _title: 'Norsys base settings'
+    _form: 'Drupal\norsys_base\Form\SettingsForm'
+  requirements:
+    _permission: 'administer norsys_base configuration'
+
+norsys_base.firstlink:
+  path: '/nos-rubrique'
+  defaults:
+    _title: 'First'
+  requirements:
+    _permission: 'content access'
+
+norsys_base.secondlink:
+  path: '/second-rubrique'
+  defaults:
+    _title: 'Second'
+  requirements:
+    _permission: 'content access'
+
+norsys_base.thirdlink:
+  path: '/nos-rubrique'
+  defaults:
+    _title: 'Third'
+  requirements:
+    _permission: 'content access'
+
+norsys_base.form_condidature:
+  path: '/norsys-base/candidature'
+  defaults:
+    _title: 'Formulaire de candidature'
+    _form: 'Drupal\norsys_base\Form\CandidatureForm'
+  requirements:
+    _permission: 'content access'
+
+norsys_base.condidature_display:
+  path: '/norsys-base'
+  defaults:
+    _controller: '\Drupal\norsys_base\Controller\CandidatureController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'
+
+norsys_base.form_delete:
+  path: '/norsys-base/candidature/delete/{id}'
+  defaults:
+    _title: 'Formulaire de candidature'
+    _form: 'Drupal\norsys_base\Form\DeleteForm'
+  requirements:
+    _permission: 'content access'

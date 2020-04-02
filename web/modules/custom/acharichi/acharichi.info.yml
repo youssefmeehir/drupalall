@@ -1,0 +1,5 @@
+name: acharichi custom module
+type: module
+core: 8.x
+description: acharichi custom block
+package: Custom

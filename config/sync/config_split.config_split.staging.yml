@@ -1,0 +1,15 @@
+uuid: 5c20afb9-cd0f-465d-b1ac-400cf101000d
+langcode: fr
+status: false
+dependencies: {  }
+id: staging
+label: staging
+description: 'Split pour environnement de recette'
+folder: ../config/staging
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 2

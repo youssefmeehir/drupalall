@@ -1,0 +1,23 @@
+uuid: 0c2f905a-0f17-46ff-8a41-8e051931b613
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page_de_rubrique.field_page
+    - node.type.page_de_rubrique
+  module:
+    - user
+id: node.page_de_rubrique.teaser
+targetEntityType: node
+bundle: page_de_rubrique
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_page: true
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: f1d186f4-9fe5-4e77-9bee-a0e97a4771d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.search_api_view
+  module:
+    - views
+  theme:
+    - norsys
+id: formulaireexposesearch_api_viewpage_1
+theme: norsys
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search_api_view-page_1'
+settings:
+  id: 'views_exposed_filter_block:search_api_view-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

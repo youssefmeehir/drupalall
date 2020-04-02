@@ -1,0 +1,16 @@
+uuid: 82320885-e481-4956-b207-383ed4e4a616
+langcode: fr
+status: false
+dependencies: {  }
+id: config_ignore
+label: config_ignore
+description: 'Paramètres ignorés à l''import : priorisé à l''import'
+folder: ../config/config_ignore
+module:
+  config_ignore: 0
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

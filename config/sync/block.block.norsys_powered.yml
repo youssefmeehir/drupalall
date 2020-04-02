@@ -1,0 +1,22 @@
+uuid: 4a2ffbcc-a34c-469c-9bd5-5bbf38fc5f9a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - norsys
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: norsys_powered
+theme: norsys
+region: footer_fifth
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Propulsé par Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

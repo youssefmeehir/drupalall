@@ -1,0 +1,41 @@
+uuid: 9f139981-1044-41b1-af00-225bfaf426da
+langcode: fr
+status: true
+dependencies: {  }
+id: contrib
+label: contrib
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer account menu items'
+  - 'administer admin menu items'
+  - 'administer devel menu items'
+  - 'create agence content'
+  - 'create page_de_rubrique content'
+  - 'create page_simple content'
+  - 'delete agence revisions'
+  - 'delete any agence content'
+  - 'delete any page content'
+  - 'delete any page_de_rubrique content'
+  - 'delete any page_simple content'
+  - 'delete own agence content'
+  - 'delete own page_de_rubrique content'
+  - 'delete own page_simple content'
+  - 'delete page_de_rubrique revisions'
+  - 'delete page_simple revisions'
+  - 'edit any agence content'
+  - 'edit any page_de_rubrique content'
+  - 'edit any page_simple content'
+  - 'edit own agence content'
+  - 'edit own page_de_rubrique content'
+  - 'edit own page_simple content'
+  - 'revert agence revisions'
+  - 'revert page_de_rubrique revisions'
+  - 'revert page_simple revisions'
+  - 'view agence revisions'
+  - 'view own unpublished content'
+  - 'view page_de_rubrique revisions'
+  - 'view page_simple revisions'

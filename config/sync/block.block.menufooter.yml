@@ -1,0 +1,25 @@
+uuid: f7f318fd-dfaa-4d2c-aa4b-39adc37da1a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer
+  module:
+    - system
+  theme:
+    - norsys
+id: menufooter
+theme: norsys
+region: footer_fifth
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer'
+settings:
+  id: 'system_menu_block:menu-footer'
+  label: 'Menu footer'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

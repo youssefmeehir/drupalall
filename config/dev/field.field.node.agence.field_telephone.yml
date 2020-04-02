@@ -1,0 +1,21 @@
+uuid: 26b21917-fc32-42c1-8328-4ce579112c04
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telephone
+    - node.type.agence
+  module:
+    - telephone
+id: node.agence.field_telephone
+field_name: field_telephone
+entity_type: node
+bundle: agence
+label: telephone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone
